@@ -32,4 +32,5 @@ Better than the workaround would be to change the implementation of `Appointment
     setDateTime(dt)
 ```
 This will make it clear that you're using the **property** setter and gaining the dirty checking behavior.
-Alternatively (and perhaps even better) is to review, refactor, and revise how the property setter is written and funnel all property mutations through that.
+Another alternative is to explicitly call `markDirty` at the same time that you change the field.
+A final alternative (and perhaps the best) is to review, refactor, and revise how the property setter is written and funnel all property mutations through that.
